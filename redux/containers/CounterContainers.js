@@ -4,7 +4,7 @@ import { decreaseAction, increaseAction } from '../actions/Index';
 
 const mapStateToProps = (state) => {
     return {
-        times: state.counterReducers ? state.counterReducers : 0;
+        times: state.counterReducers ? state.counterReducers : 0
     };
 }
 const mapDispathToProps = (dispatch) => {

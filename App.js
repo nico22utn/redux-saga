@@ -1,21 +1,16 @@
 import React from 'react';
+import CounterReducers from './redux/reducers/CounterReducers';
 import { StyleSheet, Text, View } from 'react-native';
+import CounterContainer from './redux/containers/CounterContainers';
 
+var store = createStore(CounterReducers);
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Provider store = {store}>
+        <CounterContainer/>
+      </Provider>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
