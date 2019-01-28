@@ -1,4 +1,4 @@
-import { INCREMENT } from "./ActionTypes";
+import { INCREMENT, DECREMENT } from "./ActionTypes";
 
 export const increaseAction = (step) => {
     return {
@@ -6,8 +6,9 @@ export const increaseAction = (step) => {
         step: step
     };
 }
-export const decreaseAction = (dispatch) => {
+export const decreaseAction = (step) => {
     return {
-
+        type: DECREMENT,
+        step: step
     };
 }

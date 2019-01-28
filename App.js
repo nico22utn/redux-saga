@@ -1,9 +1,11 @@
 import React from 'react';
-import CounterReducers from './redux/reducers/CounterReducers';
 import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import CounterContainer from './redux/containers/CounterContainers';
+import allReducers from './redux/reducers/Index';
 
-var store = createStore(CounterReducers);
+var store = createStore(allReducers);
 export default class App extends React.Component {
   render() {
     return (

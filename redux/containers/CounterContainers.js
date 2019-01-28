@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import  { connect }  from 'react-redux';
 import CounterComponent from '../../components/CounterComponent';
 import { decreaseAction, increaseAction } from '../actions/Index';
 
